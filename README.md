@@ -44,10 +44,3 @@ Inside of the `VirtualBoxManager.__init__()` function, you will find a line (som
 <br>
 
 If this modification is not done, the VirtualBox API will not function at all!
-
-
-## TODO
-
-Here is a "TODO" list for developers, categorized by priority level:
-
-...
