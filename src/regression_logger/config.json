@@ -1,0 +1,79 @@
+{
+    "version": 1,
+    "disable_existing_loggers": false,
+    "formatters": {
+        "simple": {
+            "format": "[%(asctime).16s|%(levelname)-8s]: %(message)s"
+        },
+        "header": {
+            "format": "%(message)s"
+        },
+        "log_level_1": {
+            "format": "[%(asctime).19s|%(levelname)-8s|%(module)-9s]: %(message)s"
+        },
+        "log_level_2": {
+            "format": "[%(asctime).19s|%(levelname)-8s|%(module)-9s]:   %(message)s"
+        },
+        "log_level_3": {
+            "format": "[%(asctime).19s|%(levelname)-8s|%(module)-9s]:   - %(message)s"
+        }
+    },
+    "handlers": {
+        "stdout": {
+            "class": "logging.StreamHandler",
+            "level": "DEBUG",
+            "stream": "ext://sys.stdout",
+            "formatter": "simple"
+        },
+        "lvl_0": {
+            "class": "logging.handlers.RotatingFileHandler",
+            "level": "DEBUG",
+            "formatter": "header",
+            "filename": "run_log.log",
+            "maxBytes": 500000,
+            "backupCount": 3
+        },
+        "lvl_1": {
+            "class": "logging.handlers.RotatingFileHandler",
+            "level": "DEBUG",
+            "formatter": "log_level_1",
+            "filename": "run_log.log",
+            "maxBytes": 500000,
+            "backupCount": 3
+        },
+        "lvl_2": {
+            "class": "logging.handlers.RotatingFileHandler",
+            "level": "DEBUG",
+            "formatter": "log_level_2",
+            "filename": "run_log.log",
+            "maxBytes": 500000,
+            "backupCount": 3
+        },
+        "lvl_3": {
+            "class": "logging.handlers.RotatingFileHandler",
+            "level": "DEBUG",
+            "formatter": "log_level_3",
+            "filename": "run_log.log",
+            "maxBytes": 500000,
+            "backupCount": 3
+        }
+    },
+    "loggers": {
+        "header_log": {
+            "level": "DEBUG",
+            "handlers": ["lvl_0", "stdout"]
+        },
+        "log_level_1": {
+            "level": "DEBUG",
+            "handlers": ["lvl_1", "stdout"]
+        },
+        "log_level_2": {
+            "level": "DEBUG",
+            "handlers": ["lvl_2", "stdout"]
+        },
+        "log_level_3": {
+            "level": "DEBUG",
+            "handlers": ["lvl_3", "stdout"]
+        }
+    }
+}

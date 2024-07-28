@@ -1,0 +1,7 @@
+<sequence testsuite="DNxTestSuiteVC9D.dll" name="sample_xml" ipaddress="xxx.xxx.xxx.xxx">
+	<test name="test20_dev12" testCase="test20" outputFile="test20_dev12.out">
+		<property name="device">
+			<integer>12</integer>
+		</property>
+	</test>
+</sequence>
