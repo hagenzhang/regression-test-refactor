@@ -1,0 +1,36 @@
+This was the note I left to the next co-op who would adopt my project:
+
+=========================================================================================
+
+LLR - HZ edit
+
+This code is the initial draft of my Low Level Regression refactor.
+This project was started due to my initial frustration with the old code. It was
+extremely cluttered, poorly organized, had little documentation, and was patched
+together by many developers over the years.
+
+I decided to take all of that code and put it all together in a brand new project
+that aimed to achieve a few goals:
+1) Cleaning up the code. No more unused functions, messy documentation, weird
+   function placement, or nonsensical code. Everything has been re-organized
+   and re-written. The code also uses a much more pythonic style.
+2) Modular code. We want to be able to easily swap components in the code without
+   needing to go through clutter. If you have an alternative implementation of
+   firmware updating, it's only 1 line you need to replace in the setup! If you want
+   to completely re-write the install step on a VM, you can easily just slot it in.
+   If you need to do some custom runs and want to change a value from the constants
+   file, simply override it.
+3) Utilizing multiprocessing. The old code couldn't do this because of the way it was
+   written. Now, we can utilize multiprocessing and speed some some steps like pinging
+   drastically.
+4) Easy to debug. If you want to remove a step or jump straight to something, it's much
+   easier to do so in this new system.
+5) Improved logging. The old logs were very unwieldy to read due to a lot of extraneous    information and no formatting. This has been fixed in the refactor.
+6) Improved documentation. The old system was extremely difficult to read due to both
+   poor organization and poor documentation. This new system provides developers with
+   much more to go off of when initially reading through the code, and can make
+   understanding what each function does much less painful.
+
+Of course, not all of these goals have been met perfectly, but I think it's a good
+start. Hopefully this initial edit sets a fair minimum standard for future developers
+to follow.
