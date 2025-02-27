@@ -25,7 +25,8 @@ that aimed to achieve a few goals:
    drastically.
 4) Easy to debug. If you want to remove a step or jump straight to something, it's much
    easier to do so in this new system.
-5) Improved logging. The old logs were very unwieldy to read due to a lot of extraneous    information and no formatting. This has been fixed in the refactor.
+5) Improved logging. The old logs were very unwieldy to read due to a lot of extraneous 
+   information and no formatting. This has been fixed in the refactor.
 6) Improved documentation. The old system was extremely difficult to read due to both
    poor organization and poor documentation. This new system provides developers with
    much more to go off of when initially reading through the code, and can make
